@@ -34,12 +34,12 @@ This Nx monorepo contains a Node.js/Express.js backend and a React frontend, bot
 
 1.  **Clone:**
     ```bash
-    git clone <your-repo-url>
-    cd <your-repo-directory>
+    git clone https://github.com/micoh-18/test-fullstackapp
+    cd test-app
     ```
 2.  **Install Dependencies:**
     ```bash
-    npm install # or: yarn install
+    npm install
     ```
 
 ## Running
@@ -54,5 +54,3 @@ To run the applications in development mode:
   ```bash
   nx serve frontend
   ```
-
-_You'll typically need to run these commands in separate terminal windows._
