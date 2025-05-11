@@ -20,7 +20,7 @@ export const submitLoanApplication = async (
   );
 
   try {
-    const response = await fetch('http://localhost:3333/api/loans/generate', {
+    const response = await fetch('http://localhost:3333/api/v1/loan-offers', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(loanApplication),

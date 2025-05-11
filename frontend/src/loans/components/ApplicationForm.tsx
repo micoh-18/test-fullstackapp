@@ -86,12 +86,20 @@ const LoanApplicationForm = ({
     const ld = formData.loanDetails;
     if (!ld.loanPurpose)
       newErrors['loanDetails.loanPurpose'] = 'Loan purpose is required.';
-    if (ld.amount === 0 || Number(ld.amount) <= 0)
-      newErrors['loanDetails.amount'] = 'Valid loan amount is required.';
+    if (
+      ld.amount === 0 ||
+      Number(ld.amount) <= 0 ||
+      (Number(ld.amount) >= 2000 && Number(ld.amount) <= 10000)
+    )
+      newErrors['loanDetails.amount'] =
+        'Loan Amount must be $2000 or greater, and no more than $10000.';
     if (ld.loanTerm === 0 || Number(ld.loanTerm) <= 0 || ld.loanTerm > 7)
       newErrors['loanDetails.loanTerm'] =
         'Valid loan term is required (e.g., up to 7 months).';
-    if (ld.deposit === 0 || Number(ld.deposit) < 0)
+    if (
+      (ld.deposit === 0 || Number(ld.deposit) < 0) &&
+      formData.loanDetails?.loanPurpose === LOAN_PURPOSES.VEHICLE
+    )
       newErrors['loanDetails.deposit'] = 'Valid deposit amount is required.';
     return newErrors;
   };
@@ -113,7 +121,6 @@ const LoanApplicationForm = ({
     const step1Errors = validateStep1();
     const step2Errors = validateStep2();
     const allErrors = { ...step1Errors, ...step2Errors };
-
     if (Object.values(allErrors).every((e) => !e)) {
       setErrors({});
       const submissionData: LoanApplication = {
