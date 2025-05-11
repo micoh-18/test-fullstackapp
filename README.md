@@ -1,77 +1,62 @@
-# TestApp
+# Project Title (e.g., Full-Stack Loan App)
 
-<a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
+_A brief (one-sentence) description of your project._
 
-✨ Your new, shiny [Nx workspace](https://nx.dev) is almost ready ✨.
+## Table of Contents
 
-[Learn more about this workspace setup and its capabilities](https://nx.dev/getting-started/intro#learn-nx?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) or run `npx nx graph` to visually explore what was created. Now, let's get you up to speed!
+- [Overview](#overview)
+- [Setup](#setup)
+- [Running](#running)
 
-## Finish your CI setup
+## Overview
 
-[Click here to finish setting up your workspace!](https://cloud.nx.app/connect/qW1B2urg9Z)
+This Nx monorepo contains a Node.js/Express.js backend and a React frontend, both using TypeScript.
 
-## Run tasks
+**Key Technologies:**
 
-To run tasks with Nx use:
+- Backend: Express.js, TypeScript
+- Frontend: React, TypeScript
+- Monorepo: Nx
+- Validation: Zod
+- Testing: Jest, Supertest
 
-```sh
-npx nx <target> <project-name>
-```
+**Project Structure:**
 
-For example:
+- `apps/backend`: The Express.js backend server.
+- `apps/frontend`: The React frontend application.
+- `libs/*`: Shared libraries and logic for the apps.
 
-```sh
-npx nx build myproject
-```
+## Setup
 
-These targets are either [inferred automatically](https://nx.dev/concepts/inferred-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) or defined in the `project.json` or `package.json` files.
+**Prerequisites:**
 
-[More about running tasks in the docs &raquo;](https://nx.dev/features/run-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+- Node.js (LTS version)
+- npm or Yarn
+- Optional: Nx CLI (`npm install -g nx`)
 
-## Add new projects
+**Installation:**
 
-While you could add new projects to your workspace manually, you might want to leverage [Nx plugins](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) and their [code generation](https://nx.dev/features/generate-code?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) feature.
+1.  **Clone:**
+    ```bash
+    git clone <your-repo-url>
+    cd <your-repo-directory>
+    ```
+2.  **Install Dependencies:**
+    ```bash
+    npm install # or: yarn install
+    ```
 
-To install a new plugin you can use the `nx add` command. Here's an example of adding the React plugin:
+## Running
 
-```sh
-npx nx add @nx/react
-```
+To run the applications in development mode:
 
-Use the plugin's generator to create new projects. For example, to create a new React app or library:
+- **Start the Backend Server:**
+  ```bash
+  nx serve backend
+  ```
+- **Start the Frontend Application:**
+  ```bash
+  nx serve frontend
+  ```
 
-```sh
-# Generate an app
-npx nx g @nx/react:app demo
-
-# Generate a library
-npx nx g @nx/react:lib some-lib
-```
-
-You can use `npx nx list` to get a list of installed plugins. Then, run `npx nx list <plugin-name>` to learn about more specific capabilities of a particular plugin. Alternatively, [install Nx Console](https://nx.dev/getting-started/editor-setup?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) to browse plugins and generators in your IDE.
-
-[Learn more about Nx plugins &raquo;](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) | [Browse the plugin registry &raquo;](https://nx.dev/plugin-registry?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-[Learn more about Nx on CI](https://nx.dev/ci/intro/ci-with-nx#ready-get-started-with-your-provider?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-## Install Nx Console
-
-Nx Console is an editor extension that enriches your developer experience. It lets you run tasks, generate code, and improves code autocompletion in your IDE. It is available for VSCode and IntelliJ.
-
-[Install Nx Console &raquo;](https://nx.dev/getting-started/editor-setup?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-## Useful links
-
-Learn more:
-
-- [Learn more about this workspace setup](https://nx.dev/getting-started/intro#learn-nx?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [Learn about Nx on CI](https://nx.dev/ci/intro/ci-with-nx?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [Releasing Packages with Nx release](https://nx.dev/features/manage-releases?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [What are Nx plugins?](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-And join the Nx community:
-
-- [Discord](https://go.nx.dev/community)
-- [Follow us on X](https://twitter.com/nxdevtools) or [LinkedIn](https://www.linkedin.com/company/nrwl)
-- [Our Youtube channel](https://www.youtube.com/@nxdevtools)
-- [Our blog](https://nx.dev/blog?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+_You'll typically need to run these commands in separate terminal windows._
