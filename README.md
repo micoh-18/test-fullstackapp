@@ -1,7 +1,3 @@
-# Project Title (e.g., Full-Stack Loan App)
-
-_A brief (one-sentence) description of your project._
-
 ## Table of Contents
 
 - [Overview](#overview)
@@ -18,7 +14,7 @@ This Nx monorepo contains a Node.js/Express.js backend and a React frontend, bot
 - Frontend: React, TypeScript
 - Monorepo: Nx
 - Validation: Zod
-- Testing: Jest, Supertest
+- Testing: Jest, Supertest, Cypress
 
 **Project Structure:**
 
