@@ -29,7 +29,7 @@ const LoanApplicationForm = ({
       employerName: '',
     },
     loanDetails: {
-      loanPurpose: LOAN_PURPOSES.DEBT_CONSOLIDATION,
+      loanPurpose: LOAN_PURPOSES.VEHICLE,
       amount: 0,
       loanTerm: 0,
       deposit: 0,
@@ -89,7 +89,8 @@ const LoanApplicationForm = ({
     if (
       ld.amount === 0 ||
       Number(ld.amount) <= 0 ||
-      (Number(ld.amount) >= 2000 && Number(ld.amount) <= 10000)
+      Number(ld.amount) < 2000 ||
+      Number(ld.amount) > 10000
     )
       newErrors['loanDetails.amount'] =
         'Loan Amount must be $2000 or greater, and no more than $10000.';
